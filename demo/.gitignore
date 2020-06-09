@@ -1,0 +1,17 @@
+# Maven
+**/target/
+
+# Intellij IDEA
+*.iml
+.idea/
+
+# Others
+.project
+.classpath
+.settings/
+/.tern-project
+**/logs/
+.directory
+
+# Experiments
+src/main/java/lab
