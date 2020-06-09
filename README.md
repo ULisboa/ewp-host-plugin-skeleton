@@ -38,7 +38,7 @@ To use the library, click the Maven Central badge above and use the correct snip
 
 To clone the project run:
 ```
-git clone https://github.com/ULisboa/forward-ewp-api-client
+git clone https://github.com/ULisboa/ewp-host-plugin-skeleton
 ```
 
 ## Building with Maven
