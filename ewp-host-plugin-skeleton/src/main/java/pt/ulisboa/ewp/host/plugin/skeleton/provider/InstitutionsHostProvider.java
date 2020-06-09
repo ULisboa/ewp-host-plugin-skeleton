@@ -1,6 +1,8 @@
 package pt.ulisboa.ewp.host.plugin.skeleton.provider;
 
-import eu.erasmuswithoutpaper.api.institutions.InstitutionsResponse;
+import java.util.Optional;
+
+import eu.erasmuswithoutpaper.api.institutions.InstitutionsResponse.Hei;
 
 /**
  * A provider that allows EWP Node to obtain institutions data from the host.
@@ -9,10 +11,10 @@ public abstract class InstitutionsHostProvider extends HostProvider {
 
   /**
    * Returns the institution data for a given HEI ID.
-   * If the plugin cannot resolve the HEI ID then it must return null.
+   * If the plugin cannot resolve the HEI ID then it must return an empty optional.
    *
    * @param heiId HEI ID of the institution
-   * @return Institution data.
+   * @return Optional with Institution data or empty, if unknown HEI ID.
    */
-  public abstract InstitutionsResponse.Hei findByHeiId(String heiId);
+  public abstract Optional<Hei> findByHeiId(String heiId);
 }

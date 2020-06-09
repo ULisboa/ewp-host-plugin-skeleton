@@ -1,5 +1,6 @@
 package pt.ulisboa.ewp.host.plugin.demo.providers;
 
+import java.util.Optional;
 import org.pf4j.Extension;
 
 import pt.ulisboa.ewp.host.plugin.demo.DemoHostPlugin;
@@ -12,7 +13,7 @@ import eu.erasmuswithoutpaper.api.institutions.InstitutionsResponse.Hei;
 public class DemoInstitutionsProvider extends InstitutionsHostProvider {
 
   @Override
-  public InstitutionsResponse findByHeiId(String heiId) {
+  public Optional<InstitutionsResponse.Hei> findByHeiId(String heiId) {
     // Example: Obtain a property registered on EWP Node specific for the current plugin
     String propertyValue = DemoHostPlugin.getInstance().getProperties().getPropertyAsString("example.key");
     System.out.println("Obtained property value: " + propertyValue);
@@ -24,11 +25,8 @@ public class DemoInstitutionsProvider extends InstitutionsHostProvider {
       stringWithOptionalLang.setLang("en");
       stringWithOptionalLang.setValue("Demo");
       hei.getName().add(stringWithOptionalLang);
-
-      InstitutionsResponse response = new InstitutionsResponse();
-      response.getHei().add(hei);
-      return response;
+      return Optional.of(hei);
     }
-    return new InstitutionsResponse();
+    return Optional.empty();
   }
 }
