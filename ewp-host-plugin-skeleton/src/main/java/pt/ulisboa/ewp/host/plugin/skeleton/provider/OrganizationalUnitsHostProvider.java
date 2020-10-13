@@ -9,6 +9,9 @@ import eu.erasmuswithoutpaper.api.ounits.OunitsResponse.Ounit;
  */
 public abstract class OrganizationalUnitsHostProvider extends HostProvider {
 
+  private static final int DEFAULT_MAX_NUMBER_OUNIT_IDS_PER_REQUEST = 1;
+  private static final int DEFAULT_MAX_NUMBER_OUNIT_CODES_PER_REQUEST = 1;
+
   /**
    * Returns a collection of organizational units given their IDs.
    * If some ID is unknown then it must be ignored.
@@ -28,4 +31,20 @@ public abstract class OrganizationalUnitsHostProvider extends HostProvider {
    * @return Collection of organizational units
    */
   public abstract Collection<Ounit> findByHeiIdAndOunitCodes(String heiId, Collection<String> ounitCodes);
+
+  /**
+   * Indicates the maximum number of organizational unit IDs that can be handled on any request.
+   * @return Maximum number of organizational unit IDs
+   */
+  public int getMaxOunitIdsPerRequest() {
+    return DEFAULT_MAX_NUMBER_OUNIT_IDS_PER_REQUEST;
+  }
+
+  /**
+   * Indicates the maximum number of organizational unit codes that can be handled on any request.
+   * @return Maximum number of organizational unit codes
+   */
+  public int getMaxOunitCodesPerRequest() {
+    return DEFAULT_MAX_NUMBER_OUNIT_CODES_PER_REQUEST;
+  }
 }
