@@ -2,7 +2,7 @@ package pt.ulisboa.ewp.host.plugin.skeleton.provider;
 
 import java.util.Optional;
 
-import eu.erasmuswithoutpaper.api.institutions.InstitutionsResponse.Hei;
+import eu.erasmuswithoutpaper.api.institutions.v2.InstitutionsResponseV2.Hei;
 
 /**
  * A provider that allows EWP Node to obtain institutions data from the host.

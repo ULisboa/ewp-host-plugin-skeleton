@@ -2,7 +2,7 @@ package pt.ulisboa.ewp.host.plugin.skeleton.provider;
 
 import java.util.Collection;
 
-import eu.erasmuswithoutpaper.api.ounits.OunitsResponse.Ounit;
+import eu.erasmuswithoutpaper.api.ounits.v2.OunitsResponseV2.Ounit;
 
 /**
  * A provider that allows EWP Node to obtain organizational units data from the host.
