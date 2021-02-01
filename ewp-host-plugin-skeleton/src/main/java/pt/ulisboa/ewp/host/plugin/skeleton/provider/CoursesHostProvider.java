@@ -1,6 +1,6 @@
 package pt.ulisboa.ewp.host.plugin.skeleton.provider;
 
-import eu.emrex.elmo.v1.LearningOpportunitySpecificationV1;
+import eu.erasmuswithoutpaper.api.courses.v0.CoursesResponseV0.LearningOpportunitySpecification;
 import java.time.LocalDate;
 import java.util.Collection;
 import javax.annotation.Nullable;
@@ -26,7 +26,7 @@ public abstract class CoursesHostProvider extends HostProvider {
      *                  If not null but the host does not support it then it may be ignored.
      * @return Collection of learning opportunity specifications
      */
-    public abstract Collection<LearningOpportunitySpecificationV1> findByHeiIdAndLosIds(String heiId, Collection<String> losIds,
+    public abstract Collection<LearningOpportunitySpecification> findByHeiIdAndLosIds(String heiId, Collection<String> losIds,
            @Nullable LocalDate loisBefore, @Nullable LocalDate loisAfter, @Nullable LocalDate losAtDate);
 
     /**
@@ -42,7 +42,7 @@ public abstract class CoursesHostProvider extends HostProvider {
      *                  If not null but the host does not support it then it may be ignored.
      * @return Collection of learning opportunity specifications
      */
-    public abstract Collection<LearningOpportunitySpecificationV1> findByHeiIdAndLosCodes(String heiId, Collection<String> losCodes,
+    public abstract Collection<LearningOpportunitySpecification> findByHeiIdAndLosCodes(String heiId, Collection<String> losCodes,
         @Nullable LocalDate loisBefore, @Nullable LocalDate loisAfter, @Nullable LocalDate losAtDate);
 
     /**
