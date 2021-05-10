@@ -4,7 +4,7 @@
 
   <groupId>pt.ulisboa</groupId>
   <artifactId>ewp-host-plugin-skeleton-parent</artifactId>
-  <version>0.3.1-SNAPSHOT</version>
+  <version>0.2.3-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>EWP Host Plugin Skeleton Parent</name>

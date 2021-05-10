@@ -4,13 +4,13 @@
   <parent>
     <groupId>pt.ulisboa</groupId>
     <artifactId>ewp-host-plugin-skeleton-parent</artifactId>
-    <version>0.3.1-SNAPSHOT</version>
+    <version>0.2.3-SNAPSHOT</version>
   </parent>
   
   <modelVersion>4.0.0</modelVersion>
   <groupId>pt.ulisboa</groupId>
   <artifactId>ewp-host-plugin-demo</artifactId>
-  <version>0.3.1-SNAPSHOT</version>
+  <version>0.2.3-SNAPSHOT</version>
   <packaging>jar</packaging>
 
   <name>EWP Host Plugin Demo</name>
@@ -29,14 +29,6 @@
     <testSourceDirectory>src/test/java</testSourceDirectory>
 
     <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-deploy-plugin</artifactId>
-        <configuration>
-          <skip>true</skip>
-        </configuration>
-      </plugin>
-
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-jar-plugin</artifactId>
