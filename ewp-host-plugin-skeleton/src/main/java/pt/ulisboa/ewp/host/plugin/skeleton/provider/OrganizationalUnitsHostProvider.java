@@ -47,4 +47,9 @@ public abstract class OrganizationalUnitsHostProvider extends HostProvider {
   public int getMaxOunitCodesPerRequest() {
     return DEFAULT_MAX_NUMBER_OUNIT_CODES_PER_REQUEST;
   }
+
+  @Override
+  public String getVersion() {
+    return "2.1.1";
+  }
 }

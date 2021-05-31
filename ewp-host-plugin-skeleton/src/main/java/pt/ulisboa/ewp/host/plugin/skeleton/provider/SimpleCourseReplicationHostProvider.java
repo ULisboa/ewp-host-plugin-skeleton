@@ -15,4 +15,9 @@ public abstract class SimpleCourseReplicationHostProvider extends HostProvider {
    * @return List of Learning Opportunities Specification IDs or empty, if unknown HEI ID.
    */
   public abstract Collection<String> findAllByHeiId(String heiId);
+
+  @Override
+  public String getVersion() {
+    return "1.0.0";
+  }
 }

@@ -17,4 +17,9 @@ public abstract class InstitutionsHostProvider extends HostProvider {
    * @return Optional with Institution data or empty, if unknown HEI ID.
    */
   public abstract Optional<Hei> findByHeiId(String heiId);
+
+  @Override
+  public String getVersion() {
+    return "2.1.0";
+  }
 }

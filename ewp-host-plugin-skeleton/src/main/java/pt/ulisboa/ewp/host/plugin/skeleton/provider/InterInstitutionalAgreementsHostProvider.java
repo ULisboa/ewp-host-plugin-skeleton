@@ -71,4 +71,9 @@ public abstract class InterInstitutionalAgreementsHostProvider extends HostProvi
     public int getMaxIiaCodesPerRequest() {
         return DEFAULT_MAX_NUMBER_IIA_CODES_PER_REQUEST;
     }
+
+    @Override
+    public String getVersion() {
+        return "4.0.0";
+    }
 }

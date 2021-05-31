@@ -32,4 +32,9 @@ public abstract class InterInstitutionalAgreementsApprovalHostProvider extends H
     public int getMaxIiaIdsPerRequest() {
         return DEFAULT_MAX_NUMBER_IIA_IDS_PER_REQUEST;
     }
+
+    @Override
+    public String getVersion() {
+        return "1.0.0";
+    }
 }

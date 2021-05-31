@@ -62,4 +62,9 @@ public abstract class CoursesHostProvider extends HostProvider {
     public int getMaxLosCodesPerRequest() {
         return DEFAULT_MAX_NUMBER_LOS_CODES_PER_REQUEST;
     }
+
+    @Override
+    public String getVersion() {
+        return "0.7.1";
+    }
 }

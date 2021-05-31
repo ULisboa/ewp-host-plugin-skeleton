@@ -17,4 +17,9 @@ public abstract class FactSheetsHostProvider extends HostProvider {
      * @return Optional of fact sheet, if applicable.
      */
     public abstract Optional<Factsheet> findByHeiId(String heiId);
+
+    @Override
+    public String getVersion() {
+        return "1.0.0";
+    }
 }
