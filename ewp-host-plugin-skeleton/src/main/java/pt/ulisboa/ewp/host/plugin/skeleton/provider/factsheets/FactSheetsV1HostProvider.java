@@ -1,13 +1,13 @@
-package pt.ulisboa.ewp.host.plugin.skeleton.provider;
-
-import java.util.Optional;
+package pt.ulisboa.ewp.host.plugin.skeleton.provider.factsheets;
 
 import eu.erasmuswithoutpaper.api.factsheet.v1.FactsheetResponseV1.Factsheet;
+import java.util.Optional;
+import pt.ulisboa.ewp.host.plugin.skeleton.provider.HostVersionedProvider;
 
 /**
- * A provider that allows EWP Node to obtain fact sheet data from the host.
+ * A provider that allows EWP Node to obtain fact sheet data from the host (V1).
  */
-public abstract class FactSheetsHostProvider extends HostProvider {
+public abstract class FactSheetsV1HostProvider extends HostVersionedProvider {
 
     /**
      * Returns an optional with the fact sheet data for a given HEI ID.

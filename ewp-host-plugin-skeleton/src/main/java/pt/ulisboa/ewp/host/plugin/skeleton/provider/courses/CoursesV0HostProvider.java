@@ -1,14 +1,15 @@
-package pt.ulisboa.ewp.host.plugin.skeleton.provider;
+package pt.ulisboa.ewp.host.plugin.skeleton.provider.courses;
 
 import eu.erasmuswithoutpaper.api.courses.v0.CoursesResponseV0.LearningOpportunitySpecification;
 import java.time.LocalDate;
 import java.util.Collection;
 import javax.annotation.Nullable;
+import pt.ulisboa.ewp.host.plugin.skeleton.provider.HostVersionedProvider;
 
 /**
- * A provider that allows EWP Node to obtain the list of Learning Opportunities Specification IDs from the host.
+ * A provider that allows EWP Node to obtain the list of Learning Opportunities Specification IDs from the host (V0).
  */
-public abstract class CoursesHostProvider extends HostProvider {
+public abstract class CoursesV0HostProvider extends HostVersionedProvider {
 
     private static final int DEFAULT_MAX_NUMBER_LOS_IDS_PER_REQUEST = 1;
     private static final int DEFAULT_MAX_NUMBER_LOS_CODES_PER_REQUEST = 1;

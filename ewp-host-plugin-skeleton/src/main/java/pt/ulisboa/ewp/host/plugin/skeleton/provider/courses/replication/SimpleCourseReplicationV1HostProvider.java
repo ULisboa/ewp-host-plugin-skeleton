@@ -1,11 +1,12 @@
-package pt.ulisboa.ewp.host.plugin.skeleton.provider;
+package pt.ulisboa.ewp.host.plugin.skeleton.provider.courses.replication;
 
 import java.util.Collection;
+import pt.ulisboa.ewp.host.plugin.skeleton.provider.HostVersionedProvider;
 
 /**
- * A provider that allows EWP Node to obtain the list of Learning Opportunities Specification IDs from the host.
+ * A provider that allows EWP Node to obtain the list of Learning Opportunities Specification IDs from the host (V1).
  */
-public abstract class SimpleCourseReplicationHostProvider extends HostProvider {
+public abstract class SimpleCourseReplicationV1HostProvider extends HostVersionedProvider {
 
   /**
    * Returns the list of Learning Opportunities Specification IDs for a given HEI ID.

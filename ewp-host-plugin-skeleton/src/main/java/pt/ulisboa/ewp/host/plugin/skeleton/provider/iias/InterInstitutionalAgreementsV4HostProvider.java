@@ -1,4 +1,4 @@
-package pt.ulisboa.ewp.host.plugin.skeleton.provider;
+package pt.ulisboa.ewp.host.plugin.skeleton.provider.iias;
 
 import java.time.LocalDateTime;
 import java.util.Collection;
@@ -6,11 +6,12 @@ import java.util.Collection;
 import javax.annotation.Nullable;
 
 import eu.erasmuswithoutpaper.api.iias.v4.endpoints.IiasGetResponseV4;
+import pt.ulisboa.ewp.host.plugin.skeleton.provider.HostVersionedProvider;
 
 /**
- * A provider that allows EWP Node to obtain the list of Inter Institutional Agreements from the host.
+ * A provider that allows EWP Node to obtain the list of Inter Institutional Agreements from the host (V4).
  */
-public abstract class InterInstitutionalAgreementsHostProvider extends HostProvider {
+public abstract class InterInstitutionalAgreementsV4HostProvider extends HostVersionedProvider {
 
     private static final int DEFAULT_MAX_NUMBER_IIA_IDS_PER_REQUEST = 1;
     private static final int DEFAULT_MAX_NUMBER_IIA_CODES_PER_REQUEST = 1;

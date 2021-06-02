@@ -1,13 +1,15 @@
-package pt.ulisboa.ewp.host.plugin.skeleton.provider;
+package pt.ulisboa.ewp.host.plugin.skeleton.provider.iias.approval;
 
 import eu.erasmuswithoutpaper.api.iias.approval.v1.IiasApprovalResponseV1;
 import java.util.Collection;
 import javax.annotation.Nullable;
+import pt.ulisboa.ewp.host.plugin.skeleton.provider.HostVersionedProvider;
 
 /**
- * A provider that allows EWP Node to obtain data about Inter Institutional Agreements' approvals from the host.
+ * A provider that allows EWP Node to obtain data about Inter Institutional Agreements' approvals from the host (V1).
  */
-public abstract class InterInstitutionalAgreementsApprovalHostProvider extends HostProvider {
+public abstract class InterInstitutionalAgreementsApprovalV1HostProvider extends
+    HostVersionedProvider {
 
     private static final int DEFAULT_MAX_NUMBER_IIA_IDS_PER_REQUEST = 1;
 

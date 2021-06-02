@@ -1,17 +1,15 @@
 package pt.ulisboa.ewp.host.plugin.demo.providers;
 
-import java.util.Optional;
-
-import org.pf4j.Extension;
-
-import pt.ulisboa.ewp.host.plugin.demo.DemoHostPlugin;
-import pt.ulisboa.ewp.host.plugin.skeleton.provider.InstitutionsHostProvider;
 import eu.erasmuswithoutpaper.api.architecture.v1.StringWithOptionalLangV1;
 import eu.erasmuswithoutpaper.api.institutions.v2.InstitutionsResponseV2;
 import eu.erasmuswithoutpaper.api.institutions.v2.InstitutionsResponseV2.Hei;
+import java.util.Optional;
+import org.pf4j.Extension;
+import pt.ulisboa.ewp.host.plugin.demo.DemoHostPlugin;
+import pt.ulisboa.ewp.host.plugin.skeleton.provider.institutions.InstitutionsV2HostProvider;
 
 @Extension
-public class DemoInstitutionsProvider extends InstitutionsHostProvider {
+public class DemoInstitutionsV2Provider extends InstitutionsV2HostProvider {
 
   @Override
   public Optional<InstitutionsResponseV2.Hei> findByHeiId(String heiId) {

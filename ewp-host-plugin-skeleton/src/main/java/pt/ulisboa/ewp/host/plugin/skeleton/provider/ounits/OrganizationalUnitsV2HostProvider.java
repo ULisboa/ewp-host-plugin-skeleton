@@ -1,13 +1,14 @@
-package pt.ulisboa.ewp.host.plugin.skeleton.provider;
+package pt.ulisboa.ewp.host.plugin.skeleton.provider.ounits;
 
 import java.util.Collection;
 
 import eu.erasmuswithoutpaper.api.ounits.v2.OunitsResponseV2.Ounit;
+import pt.ulisboa.ewp.host.plugin.skeleton.provider.HostVersionedProvider;
 
 /**
- * A provider that allows EWP Node to obtain organizational units data from the host.
+ * A provider that allows EWP Node to obtain organizational units data from the host (V2).
  */
-public abstract class OrganizationalUnitsHostProvider extends HostProvider {
+public abstract class OrganizationalUnitsV2HostProvider extends HostVersionedProvider {
 
   private static final int DEFAULT_MAX_NUMBER_OUNIT_IDS_PER_REQUEST = 1;
   private static final int DEFAULT_MAX_NUMBER_OUNIT_CODES_PER_REQUEST = 1;

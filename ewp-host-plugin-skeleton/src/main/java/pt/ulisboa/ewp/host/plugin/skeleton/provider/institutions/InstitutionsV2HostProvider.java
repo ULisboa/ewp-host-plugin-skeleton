@@ -1,13 +1,13 @@
-package pt.ulisboa.ewp.host.plugin.skeleton.provider;
-
-import java.util.Optional;
+package pt.ulisboa.ewp.host.plugin.skeleton.provider.institutions;
 
 import eu.erasmuswithoutpaper.api.institutions.v2.InstitutionsResponseV2.Hei;
+import java.util.Optional;
+import pt.ulisboa.ewp.host.plugin.skeleton.provider.HostVersionedProvider;
 
 /**
- * A provider that allows EWP Node to obtain institutions data from the host.
+ * A provider that allows EWP Node to obtain institutions data from the host (V2).
  */
-public abstract class InstitutionsHostProvider extends HostProvider {
+public abstract class InstitutionsV2HostProvider extends HostVersionedProvider {
 
   /**
    * Returns the institution data for a given HEI ID.
