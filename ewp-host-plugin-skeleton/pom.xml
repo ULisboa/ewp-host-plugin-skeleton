@@ -4,13 +4,13 @@
   <parent>
     <groupId>pt.ulisboa</groupId>
     <artifactId>ewp-host-plugin-skeleton-parent</artifactId>
-    <version>0.7.0</version>
+    <version>0.7.1-SNAPSHOT</version>
   </parent>
 
   <modelVersion>4.0.0</modelVersion>
   <groupId>pt.ulisboa</groupId>
   <artifactId>ewp-host-plugin-skeleton</artifactId>
-  <version>0.7.0</version>
+  <version>0.7.1-SNAPSHOT</version>
   <packaging>jar</packaging>
 
   <name>EWP Host Plugin Skeleton</name>
