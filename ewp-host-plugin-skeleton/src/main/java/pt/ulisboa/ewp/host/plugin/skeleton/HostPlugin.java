@@ -45,6 +45,13 @@ public abstract class HostPlugin extends Plugin implements PluginPropertiesAware
     public abstract Collection<String> getCoveredOunitIdsByHeiId(String heiId);
 
     /**
+     * Returns all organizational unit codes covered, by the current host plugin, for a specific heiId.
+     *
+     * @param heiId The HEI ID (schac code)
+     */
+    public abstract Collection<String> getCoveredOunitCodesByHeiId(String heiId);
+
+    /**
      * Indicates whether, for the given heiId, the current host plugin is to be used
      * by default, for InterInstitutional Agreements / Outgoing Mobilities, when the EWP Node cannot redirect a request to a
      * specific host plugin.

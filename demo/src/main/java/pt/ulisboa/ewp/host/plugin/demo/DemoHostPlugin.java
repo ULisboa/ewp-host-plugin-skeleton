@@ -31,6 +31,11 @@ public class DemoHostPlugin extends HostPlugin {
   }
 
   @Override
+  public Collection<String> getCoveredOunitCodesByHeiId(String heiId) {
+    return Collections.singletonList("example");
+  }
+
+  @Override
   public boolean isPrimaryForHeiId(String heiId) {
     return true;
   }
