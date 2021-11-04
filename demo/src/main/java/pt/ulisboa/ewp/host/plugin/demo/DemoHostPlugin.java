@@ -24,4 +24,14 @@ public class DemoHostPlugin extends HostPlugin {
   public Collection<String> getCoveredHeiIds() {
     return Collections.singletonList("example.com");
   }
+
+  @Override
+  public Collection<String> getCoveredOunitIdsByHeiId(String heiId) {
+    return Collections.singletonList("example");
+  }
+
+  @Override
+  public boolean isPrimaryForHeiId(String heiId) {
+    return true;
+  }
 }
