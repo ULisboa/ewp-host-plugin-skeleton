@@ -5,13 +5,13 @@ import java.util.Collection;
 
 import javax.annotation.Nullable;
 
-import eu.erasmuswithoutpaper.api.iias.v4.endpoints.IiasGetResponseV4;
+import eu.erasmuswithoutpaper.api.iias.v6.endpoints.IiasGetResponseV6;
 import pt.ulisboa.ewp.host.plugin.skeleton.provider.HostVersionedProvider;
 
 /**
- * A provider that allows EWP Node to obtain the list of Inter Institutional Agreements from the host (V4).
+ * A provider that allows EWP Node to obtain the list of Inter Institutional Agreements from the host (V6).
  */
-public abstract class InterInstitutionalAgreementsV4HostProvider extends HostVersionedProvider {
+public abstract class InterInstitutionalAgreementsV6HostProvider extends HostVersionedProvider {
 
     private static final int DEFAULT_MAX_NUMBER_IIA_IDS_PER_REQUEST = 1;
     private static final int DEFAULT_MAX_NUMBER_IIA_CODES_PER_REQUEST = 1;
@@ -40,7 +40,7 @@ public abstract class InterInstitutionalAgreementsV4HostProvider extends HostVer
      * @param sendPdf If true, the response must include the PDF version of the agreement.
      * @return Collection of IIAs.
      */
-    public abstract Collection<IiasGetResponseV4.Iia> findByHeiIdAndIiaIds(String heiId, Collection<String> iiaIds,
+    public abstract Collection<IiasGetResponseV6.Iia> findByHeiIdAndIiaIds(String heiId, Collection<String> iiaIds,
             @Nullable Boolean sendPdf);
 
     /**
@@ -52,7 +52,7 @@ public abstract class InterInstitutionalAgreementsV4HostProvider extends HostVer
      * @param sendPdf If true, the response must include the PDF version of the agreement.
      * @return Collection of IIAs.
      */
-    public abstract Collection<IiasGetResponseV4.Iia> findByHeiIdAndIiaCodes(String heiId, Collection<String> iiaCodes,
+    public abstract Collection<IiasGetResponseV6.Iia> findByHeiIdAndIiaCodes(String heiId, Collection<String> iiaCodes,
             @Nullable Boolean sendPdf);
 
     /**
@@ -75,6 +75,6 @@ public abstract class InterInstitutionalAgreementsV4HostProvider extends HostVer
 
     @Override
     public String getVersion() {
-        return "4.0.0";
+        return "6.0.1";
     }
 }
