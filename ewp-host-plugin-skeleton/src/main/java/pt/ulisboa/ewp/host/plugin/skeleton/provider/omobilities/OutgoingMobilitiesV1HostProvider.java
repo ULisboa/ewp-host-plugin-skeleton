@@ -18,6 +18,8 @@ public abstract class OutgoingMobilitiesV1HostProvider extends HostVersionedProv
     /**
      * Returns a collection of Outgoing Mobility IDs which the requester has access to.
      *
+     * @param requesterCoveredHeiIds List of HEI IDs covered by the requester. The result should be restricted to the mobilities
+     *            to which some covered HEI ID has access to.
      * @param sendingHeiId Identifier of the HEI which is the sending partner of the outgoing mobilities.
      * @param receivingHeiIds If not null, the list of returned Outgoing Mobility IDs must only include those mobilities whose
      *            receiving institution matches at least one of the given identifiers.
@@ -28,19 +30,21 @@ public abstract class OutgoingMobilitiesV1HostProvider extends HostVersionedProv
      *            modified after the given point in time.
      * @return Collection of Outgoing Mobility IDs.
      */
-    public abstract Collection<String> findOutgoingMobilityIds(String sendingHeiId, Collection<String> receivingHeiIds,
+    public abstract Collection<String> findOutgoingMobilityIds(Collection<String> requesterCoveredHeiIds, String sendingHeiId, Collection<String> receivingHeiIds,
             @Nullable String receivingAcademicYearId, @Nullable LocalDateTime modifiedSince);
 
     /**
      * Returns a collection of Outgoing Mobilities given their IDs.
      * If some ID is unknown then it must be ignored.
      *
+     * @param requesterCoveredHeiIds List of HEI IDs covered by the requester. The result should be restricted to the mobilities
+     *            to which some covered HEI ID has access to.
      * @param sendingHeiId HEI ID of the sending institution.
      * @param outgoingMobilityIds Outgoing Mobilities IDs to obtain.
      * @return Collection of Outgoing Mobilities.
      */
-    public abstract Collection<StudentMobilityForStudiesV1> findBySendingHeiIdAndOutgoingMobilityIds(String sendingHeiId,
-            Collection<String> outgoingMobilityIds);
+    public abstract Collection<StudentMobilityForStudiesV1> findBySendingHeiIdAndOutgoingMobilityIds(
+            Collection<String> requesterCoveredHeiIds, String sendingHeiId, Collection<String> outgoingMobilityIds);
 
     /**
      * Indicates the maximum number of Outgoing Mobility IDs that can be handled on any request.

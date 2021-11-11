@@ -24,6 +24,8 @@ public abstract class IncomingMobilityToRsV1HostProvider extends HostVersionedPr
      * @see <a href="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tors/blob/stable-v1/endpoints/index.md">EWP
      *      Specification</a>
      *
+     * @param requesterCoveredHeiIds List of HEI IDs covered by the requester. The result should be restricted to the Transcripts
+     *            of Record to which some covered HEI ID has access to.
      * @param receivingHeiId Identifier of the HEI which is the receiving partner of the mobilities, and the issuer of the
      *            returned Transcripts of Records.
      * @param sendingHeiIds If not null, the list of returned mobility IDs must only include those mobilities whose sending
@@ -32,8 +34,8 @@ public abstract class IncomingMobilityToRsV1HostProvider extends HostVersionedPr
      *            been either created or modified after the given point in time.
      * @return Collection of Outgoing Mobility IDs.
      */
-    public abstract Collection<String> findOutgoingMobilityIds(String receivingHeiId, Collection<String> sendingHeiIds,
-            @Nullable LocalDateTime modifiedSince);
+    public abstract Collection<String> findOutgoingMobilityIds(Collection<String> requesterCoveredHeiIds, String receivingHeiId,
+            Collection<String> sendingHeiIds, @Nullable LocalDateTime modifiedSince);
 
     /**
      * Returns a collection of Transcripts of Records given their mobility IDs.
@@ -43,13 +45,15 @@ public abstract class IncomingMobilityToRsV1HostProvider extends HostVersionedPr
      * @see <a href="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tors/blob/stable-v1/endpoints/get.md">EWP
      *      Specification</a>
      *
+     * @param requesterCoveredHeiIds List of HEI IDs covered by the requester. The result should be restricted to the Transcripts
+     *            of Record to which some covered HEI ID has access to.
      * @param receivingHeiId HEI ID of the receiving institution.
      * @param outgoingMobilityIds Outgoing Mobilities IDs for which the client wants to retrieve corresponding Transcripts of
      *            Records. If some ID is unknown then it must be ignored.
      * @return Collection of Transcripts of Records.
      */
-    public abstract Collection<ImobilityTorsGetResponseV1> findByReceivingHeiIdAndOutgoingMobilityIds(String receivingHeiId,
-            Collection<String> outgoingMobilityIds);
+    public abstract Collection<ImobilityTorsGetResponseV1> findByReceivingHeiIdAndOutgoingMobilityIds(
+            Collection<String> requesterCoveredHeiIds, String receivingHeiId, Collection<String> outgoingMobilityIds);
 
     /**
      * Indicates the maximum number of Outgoing Mobility IDs that can be handled on any request.

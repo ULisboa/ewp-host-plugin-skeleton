@@ -19,12 +19,14 @@ public abstract class IncomingMobilitiesV1HostProvider extends HostVersionedProv
      * @see <a href="https://github.com/erasmus-without-paper/ewp-specs-api-imobilities/blob/stable-v1/endpoints/get.md">EWP
      *      Specification</a>
      *
+     * @param requesterCoveredHeiIds List of HEI IDs covered by the requester. The result should be restricted to the mobilities
+     *            to which some covered HEI ID has access to.
      * @param receivingHeiId HEI ID of the receiving institution.
      * @param outgoingMobilityIds Outgoing Mobilities IDs to obtain.
      * @return Collection of Incoming Mobilities.
      */
-    public abstract Collection<ImobilitiesGetResponseV1> findBySendingHeiIdAndOutgoingMobilityIds(String receivingHeiId,
-            Collection<String> outgoingMobilityIds);
+    public abstract Collection<ImobilitiesGetResponseV1> findBySendingHeiIdAndOutgoingMobilityIds(
+            Collection<String> requesterCoveredHeiIds, String receivingHeiId, Collection<String> outgoingMobilityIds);
 
     /**
      * Indicates the maximum number of Outgoing Mobility IDs that can be handled on any request.

@@ -26,6 +26,8 @@ public abstract class OutgoingMobilityLearningAgreementsV1HostProvider extends H
      * @see <a href="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/endpoints/index.md">EWP
      *      Specification</a>
      *
+     * @param requesterCoveredHeiIds List of HEI IDs covered by the requester. The result should be restricted to the mobilities
+     *            to which some covered HEI ID has access to.
      * @param sendingHeiId Identifier of the HEI which is the sending partner of the outgoing mobilities.
      * @param receivingHeiIds If not null, the list of returned Outgoing Mobility IDs must only include those mobilities whose
      *            receiving institution matches at least one of the given identifiers.
@@ -40,9 +42,9 @@ public abstract class OutgoingMobilityLearningAgreementsV1HostProvider extends H
      *            modified after the given point in time.
      * @return Collection of Outgoing Mobility IDs.
      */
-    public abstract Collection<String> findOutgoingMobilityIds(String sendingHeiId, Collection<String> receivingHeiIds,
-            @Nullable String receivingAcademicYearId, @Nullable String globalId, @Nullable String mobilityType,
-            @Nullable LocalDateTime modifiedSince);
+    public abstract Collection<String> findOutgoingMobilityIds(Collection<String> requesterCoveredHeiIds, String sendingHeiId,
+            Collection<String> receivingHeiIds, @Nullable String receivingAcademicYearId, @Nullable String globalId,
+            @Nullable String mobilityType, @Nullable LocalDateTime modifiedSince);
 
     /**
      * Returns a collection of learning agreements given their outgoing mobility IDs.
@@ -50,12 +52,14 @@ public abstract class OutgoingMobilityLearningAgreementsV1HostProvider extends H
      * @see <a href="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/endpoints/get.md">EWP
      *      Specification</a>
      *
+     * @param requesterCoveredHeiIds List of HEI IDs covered by the requester. The result should be restricted to the mobilities
+     *            to which some covered HEI ID has access to.
      * @param sendingHeiId HEI ID of the sending institution (mobilities' owner).
      * @param outgoingMobilityIds Outgoing Mobilities IDs to obtain. If some ID is unknown then it must be ignored.
      * @return Collection of learning agreements.
      */
-    public abstract Collection<StudentMobilityForStudiesV1> findBySendingHeiIdAndOutgoingMobilityIds(String sendingHeiId,
-            Collection<String> outgoingMobilityIds);
+    public abstract Collection<StudentMobilityForStudiesV1> findBySendingHeiIdAndOutgoingMobilityIds(
+            Collection<String> requesterCoveredHeiIds, String sendingHeiId, Collection<String> outgoingMobilityIds);
 
     /**
      * Comments or approves a Learning Agreement proposal.
@@ -65,6 +69,8 @@ public abstract class OutgoingMobilityLearningAgreementsV1HostProvider extends H
      * @see <a href="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/endpoints/update.md">EWP
      *      Specification</a>
      *
+     * @param requesterCoveredHeiIds List of HEI IDs covered by the requester. The result should be restricted to the mobilities
+     *            to which some covered HEI ID has access to.
      * @param updateData Update data (@see <a href=
      *            "https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/endpoints/update-request.xsd">EWP
      *            Specification</a>)
@@ -73,8 +79,8 @@ public abstract class OutgoingMobilityLearningAgreementsV1HostProvider extends H
      *             "https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/endpoints/update.md">EWP
      *             Specification</a> for details on possible conflicts.
      */
-    public abstract void updateOutgoingMobilityLearningAgreement(OmobilityLasUpdateRequestV1 updateData)
-            throws EditConflictException;
+    public abstract void updateOutgoingMobilityLearningAgreement(Collection<String> requesterCoveredHeiIds,
+            OmobilityLasUpdateRequestV1 updateData) throws EditConflictException;
 
     /**
      * Indicates the maximum number of Outgoing Mobility IDs that can be handled on any request.

@@ -19,6 +19,8 @@ public abstract class InterInstitutionalAgreementsV6HostProvider extends HostVer
     /**
      * Returns a collection of IIA IDs which the requester has access to.
      *
+     * @param requesterCoveredHeiIds List of HEI IDs covered by the requester. The result should be restricted to the IIAs to
+     *            which some covered HEI ID has access to.
      * @param heiId Identifier of the HEI which we want to fetch the list of IIAs from.
      * @param partnerHeiId Identifier used to limit the list of returned IIA IDs to only those in which the partner HEI ID is one
      *            of the partners.
@@ -28,32 +30,36 @@ public abstract class InterInstitutionalAgreementsV6HostProvider extends HostVer
      *            modified after the given point in time.
      * @return Collection of IIA IDs.
      */
-    public abstract Collection<String> findAllIiaIdsByHeiId(String heiId, @Nullable String partnerHeiId,
-            Collection<String> receivingAcademicYearIds, LocalDateTime modifiedSince);
+    public abstract Collection<String> findAllIiaIdsByHeiId(Collection<String> requesterCoveredHeiIds, String heiId,
+            @Nullable String partnerHeiId, Collection<String> receivingAcademicYearIds, LocalDateTime modifiedSince);
 
     /**
      * Returns a collection of IIAs given their IDs.
      * If some code is unknown then it must be ignored.
      *
+     * @param requesterCoveredHeiIds List of HEI IDs covered by the requester. The result should be restricted to the IIAs to
+     *            which some covered HEI ID has access to.
      * @param heiId HEI ID of the institution that contains the intended IIAs.
      * @param iiaIds IIA IDs to obtain.
      * @param sendPdf If true, the response must include the PDF version of the agreement.
      * @return Collection of IIAs.
      */
-    public abstract Collection<IiasGetResponseV6.Iia> findByHeiIdAndIiaIds(String heiId, Collection<String> iiaIds,
-            @Nullable Boolean sendPdf);
+    public abstract Collection<IiasGetResponseV6.Iia> findByHeiIdAndIiaIds(Collection<String> requesterCoveredHeiIds,
+            String heiId, Collection<String> iiaIds, @Nullable Boolean sendPdf);
 
     /**
      * Returns a collection of IIAs given their codes.
      * If some code is unknown then it must be ignored.
      *
+     * @param requesterCoveredHeiIds List of HEI IDs covered by the requester. The result should be restricted to the IIAs to
+     *            which some covered HEI ID has access to.
      * @param heiId HEI ID of the institution that contains the intended IIAs.
      * @param iiaCodes IIA codes to obtain.
      * @param sendPdf If true, the response must include the PDF version of the agreement.
      * @return Collection of IIAs.
      */
-    public abstract Collection<IiasGetResponseV6.Iia> findByHeiIdAndIiaCodes(String heiId, Collection<String> iiaCodes,
-            @Nullable Boolean sendPdf);
+    public abstract Collection<IiasGetResponseV6.Iia> findByHeiIdAndIiaCodes(Collection<String> requesterCoveredHeiIds,
+            String heiId, Collection<String> iiaCodes, @Nullable Boolean sendPdf);
 
     /**
      * Indicates the maximum number of IIA IDs that can be handled on any request.
