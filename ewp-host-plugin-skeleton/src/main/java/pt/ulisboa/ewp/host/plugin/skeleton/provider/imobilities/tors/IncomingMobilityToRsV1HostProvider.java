@@ -11,7 +11,7 @@ import pt.ulisboa.ewp.host.plugin.skeleton.provider.HostVersionedProvider;
 /**
  * A provider that allows EWP Node to obtain the list of Incoming Mobility Transcripts of Records from the host (V1).
  */
-public abstract class OutgoingMobilityToRsV1HostProvider extends HostVersionedProvider {
+public abstract class IncomingMobilityToRsV1HostProvider extends HostVersionedProvider {
 
     private static final int DEFAULT_MAX_NUMBER_OUTGOING_MOBILITY_IDS_PER_REQUEST = 1;
 
