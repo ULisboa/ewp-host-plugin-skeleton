@@ -60,6 +60,8 @@ public abstract class OutgoingMobilityLearningAgreementsV1HostProvider extends H
     /**
      * Comments or approves a Learning Agreement proposal.
      *
+     * It must throw an EditConflictException if some edit conflict is detected.
+     *
      * @see <a href="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/endpoints/update.md">EWP
      *      Specification</a>
      *
