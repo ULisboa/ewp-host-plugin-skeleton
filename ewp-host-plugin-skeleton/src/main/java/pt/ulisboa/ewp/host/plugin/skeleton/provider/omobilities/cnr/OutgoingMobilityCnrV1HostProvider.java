@@ -5,7 +5,8 @@ import java.util.Collection;
 import pt.ulisboa.ewp.host.plugin.skeleton.provider.HostVersionedProvider;
 
 /**
- * A provider that allows EWP Node to notify a host about a change notification on some outgoing mobility (V1).
+ * A provider that allows EWP Node to notify a host about a change notification on some outgoing mobility kept by some partner
+ * institution (V1).
  */
 public abstract class OutgoingMobilityCnrV1HostProvider extends HostVersionedProvider {
 

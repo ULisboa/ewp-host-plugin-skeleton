@@ -5,7 +5,8 @@ import java.util.Collection;
 import pt.ulisboa.ewp.host.plugin.skeleton.provider.HostVersionedProvider;
 
 /**
- * A provider that allows EWP Node to notify a host about a change notification on some outgoing mobility learning agreement (V1).
+ * A provider that allows EWP Node to notify a host about a change notification on some outgoing mobility learning agreement kept
+ * by some partner institution (V1).
  */
 public abstract class OutgoingMobilityLearningAgreementCnrV1HostProvider extends HostVersionedProvider {
 
@@ -17,7 +18,8 @@ public abstract class OutgoingMobilityLearningAgreementCnrV1HostProvider extends
      * @see <a href="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-la-cnr/tree/stable-v1">EWP
      *      Specification</a>
      *
-     * @param sendingHeiId Identifier of the HEI which is the sending partner of the outgoing mobility learning agreements that have been changed.
+     * @param sendingHeiId Identifier of the HEI which is the sending partner of the outgoing mobility learning agreements that
+     *            have been changed.
      * @param outgoingMobilityIds Outgoing Mobility (Learning Agreement) IDs that were changed.
      */
     public abstract void onChangeNotification(String sendingHeiId, Collection<String> outgoingMobilityIds);
