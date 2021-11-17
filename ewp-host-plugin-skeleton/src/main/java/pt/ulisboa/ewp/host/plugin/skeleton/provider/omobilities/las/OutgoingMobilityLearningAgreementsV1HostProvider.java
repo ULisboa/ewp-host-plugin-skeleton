@@ -1,5 +1,6 @@
 package pt.ulisboa.ewp.host.plugin.skeleton.provider.omobilities.las;
 
+import eu.erasmuswithoutpaper.api.omobilities.las.v1.endpoints.OmobilityLasUpdateResponseV1;
 import java.time.LocalDateTime;
 import java.util.Collection;
 
@@ -79,7 +80,7 @@ public abstract class OutgoingMobilityLearningAgreementsV1HostProvider extends H
      *             "https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/endpoints/update.md">EWP
      *             Specification</a> for details on possible conflicts.
      */
-    public abstract void updateOutgoingMobilityLearningAgreement(Collection<String> requesterCoveredHeiIds,
+    public abstract OmobilityLasUpdateResponseV1 updateOutgoingMobilityLearningAgreement(Collection<String> requesterCoveredHeiIds,
             OmobilityLasUpdateRequestV1 updateData) throws EditConflictException;
 
     /**
