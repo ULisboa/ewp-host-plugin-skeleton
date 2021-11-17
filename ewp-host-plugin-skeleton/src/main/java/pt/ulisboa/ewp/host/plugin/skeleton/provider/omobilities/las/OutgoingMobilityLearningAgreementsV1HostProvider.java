@@ -5,8 +5,8 @@ import java.util.Collection;
 
 import javax.annotation.Nullable;
 
+import eu.erasmuswithoutpaper.api.omobilities.las.v1.endpoints.LearningAgreementV1;
 import eu.erasmuswithoutpaper.api.omobilities.las.v1.endpoints.OmobilityLasUpdateRequestV1;
-import eu.erasmuswithoutpaper.api.omobilities.v1.endpoints.StudentMobilityForStudiesV1;
 import pt.ulisboa.ewp.host.plugin.skeleton.exceptions.EditConflictException;
 import pt.ulisboa.ewp.host.plugin.skeleton.provider.HostVersionedProvider;
 
@@ -58,7 +58,7 @@ public abstract class OutgoingMobilityLearningAgreementsV1HostProvider extends H
      * @param outgoingMobilityIds Outgoing Mobilities IDs to obtain. If some ID is unknown then it must be ignored.
      * @return Collection of learning agreements.
      */
-    public abstract Collection<StudentMobilityForStudiesV1> findBySendingHeiIdAndOutgoingMobilityIds(
+    public abstract Collection<LearningAgreementV1> findBySendingHeiIdAndOutgoingMobilityIds(
             Collection<String> requesterCoveredHeiIds, String sendingHeiId, Collection<String> outgoingMobilityIds);
 
     /**
