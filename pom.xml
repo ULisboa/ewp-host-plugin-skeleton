@@ -4,7 +4,7 @@
 
   <groupId>pt.ulisboa</groupId>
   <artifactId>ewp-host-plugin-skeleton-parent</artifactId>
-  <version>0.13.1</version>
+  <version>0.13.2-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>EWP Host Plugin Skeleton Parent</name>
@@ -33,7 +33,7 @@
     <developerConnection>scm:git:git@github.com:ULisboa/ewp-host-plugin-skeleton.git
     </developerConnection>
     <url>http://github.com/ULisboa/ewp-host-plugin-skeleton/tree/master</url>
-    <tag>0.13.1</tag>
+    <tag>HEAD</tag>
   </scm>
 
   <properties>
