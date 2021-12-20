@@ -52,7 +52,7 @@ public abstract class IncomingMobilityToRsV1HostProvider extends HostVersionedPr
      *            Records. If some ID is unknown then it must be ignored.
      * @return Collection of Transcripts of Records.
      */
-    public abstract Collection<ImobilityTorsGetResponseV1> findByReceivingHeiIdAndOutgoingMobilityIds(
+    public abstract Collection<ImobilityTorsGetResponseV1.Tor> findByReceivingHeiIdAndOutgoingMobilityIds(
             Collection<String> requesterCoveredHeiIds, String receivingHeiId, Collection<String> outgoingMobilityIds);
 
     /**

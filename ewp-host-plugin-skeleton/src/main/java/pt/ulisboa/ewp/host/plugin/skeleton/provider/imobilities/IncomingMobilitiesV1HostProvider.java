@@ -2,7 +2,7 @@ package pt.ulisboa.ewp.host.plugin.skeleton.provider.imobilities;
 
 import java.util.Collection;
 
-import eu.erasmuswithoutpaper.api.imobilities.v1.endpoints.ImobilitiesGetResponseV1;
+import eu.erasmuswithoutpaper.api.imobilities.v1.endpoints.StudentMobilityForStudiesV1;
 import pt.ulisboa.ewp.host.plugin.skeleton.provider.HostVersionedProvider;
 
 /**
@@ -25,7 +25,7 @@ public abstract class IncomingMobilitiesV1HostProvider extends HostVersionedProv
      * @param outgoingMobilityIds Outgoing Mobilities IDs to obtain.
      * @return Collection of Incoming Mobilities.
      */
-    public abstract Collection<ImobilitiesGetResponseV1> findByReceivingHeiIdAndOutgoingMobilityIds(
+    public abstract Collection<StudentMobilityForStudiesV1> findByReceivingHeiIdAndOutgoingMobilityIds(
             Collection<String> requesterCoveredHeiIds, String receivingHeiId, Collection<String> outgoingMobilityIds);
 
     /**
