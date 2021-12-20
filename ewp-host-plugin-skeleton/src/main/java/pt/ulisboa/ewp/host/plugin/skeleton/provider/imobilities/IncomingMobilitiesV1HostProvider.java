@@ -25,7 +25,7 @@ public abstract class IncomingMobilitiesV1HostProvider extends HostVersionedProv
      * @param outgoingMobilityIds Outgoing Mobilities IDs to obtain.
      * @return Collection of Incoming Mobilities.
      */
-    public abstract Collection<ImobilitiesGetResponseV1> findBySendingHeiIdAndOutgoingMobilityIds(
+    public abstract Collection<ImobilitiesGetResponseV1> findByReceivingHeiIdAndOutgoingMobilityIds(
             Collection<String> requesterCoveredHeiIds, String receivingHeiId, Collection<String> outgoingMobilityIds);
 
     /**
