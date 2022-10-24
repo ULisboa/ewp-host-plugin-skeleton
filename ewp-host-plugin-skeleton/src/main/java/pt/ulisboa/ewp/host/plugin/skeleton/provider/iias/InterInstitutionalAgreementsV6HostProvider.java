@@ -1,5 +1,6 @@
 package pt.ulisboa.ewp.host.plugin.skeleton.provider.iias;
 
+import eu.erasmuswithoutpaper.api.iias.v6.endpoints.IiasStatsResponseV6;
 import java.time.LocalDateTime;
 import java.util.Collection;
 
@@ -61,6 +62,8 @@ public abstract class InterInstitutionalAgreementsV6HostProvider extends HostVer
     public abstract Collection<IiasGetResponseV6.Iia> findByHeiIdAndIiaCodes(Collection<String> requesterCoveredHeiIds,
             String heiId, Collection<String> iiaCodes, @Nullable Boolean sendPdf);
 
+    public abstract IiasStatsResponseV6 getStats();
+
     /**
      * Indicates the maximum number of IIA IDs that can be handled on any request.
      * 
@@ -81,6 +84,6 @@ public abstract class InterInstitutionalAgreementsV6HostProvider extends HostVer
 
     @Override
     public String getVersion() {
-        return "6.0.1";
+        return "6.2.0";
     }
 }
