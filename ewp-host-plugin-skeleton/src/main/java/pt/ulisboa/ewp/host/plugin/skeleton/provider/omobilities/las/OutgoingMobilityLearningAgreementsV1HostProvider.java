@@ -1,5 +1,6 @@
 package pt.ulisboa.ewp.host.plugin.skeleton.provider.omobilities.las;
 
+import eu.erasmuswithoutpaper.api.omobilities.las.v1.endpoints.LasOutgoingStatsResponseV1;
 import eu.erasmuswithoutpaper.api.omobilities.las.v1.endpoints.OmobilityLasUpdateResponseV1;
 import java.time.LocalDateTime;
 import java.util.Collection;
@@ -83,6 +84,8 @@ public abstract class OutgoingMobilityLearningAgreementsV1HostProvider extends H
     public abstract OmobilityLasUpdateResponseV1 updateOutgoingMobilityLearningAgreement(Collection<String> requesterCoveredHeiIds,
             OmobilityLasUpdateRequestV1 updateData) throws EditConflictException;
 
+    public abstract LasOutgoingStatsResponseV1 getStats();
+
     /**
      * Indicates the maximum number of Outgoing Mobility IDs that can be handled on any request.
      * 
@@ -94,6 +97,6 @@ public abstract class OutgoingMobilityLearningAgreementsV1HostProvider extends H
 
     @Override
     public String getVersion() {
-        return "1.0.1";
+        return "1.2.0";
     }
 }
