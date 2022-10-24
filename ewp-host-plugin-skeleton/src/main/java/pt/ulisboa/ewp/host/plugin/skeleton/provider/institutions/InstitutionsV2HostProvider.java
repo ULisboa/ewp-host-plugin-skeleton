@@ -20,6 +20,6 @@ public abstract class InstitutionsV2HostProvider extends HostVersionedProvider {
 
   @Override
   public String getVersion() {
-    return "2.1.0";
+    return "2.2.0";
   }
 }
