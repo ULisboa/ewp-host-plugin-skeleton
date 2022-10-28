@@ -84,7 +84,16 @@ public abstract class OutgoingMobilityLearningAgreementsV1HostProvider extends H
     public abstract OmobilityLasUpdateResponseV1 updateOutgoingMobilityLearningAgreement(Collection<String> requesterCoveredHeiIds,
             OmobilityLasUpdateRequestV1 updateData) throws EditConflictException;
 
-    public abstract LasOutgoingStatsResponseV1 getStats();
+    /**
+     * Returns the stats relative to the provided HEI ID.
+     *
+     * @see <a href="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/endpoints/stats.md">EWP
+     *      Specification</a>
+     *
+     * @param heiId HEI ID of the institution from which to retrieve its stats.
+     * @return Stats of the provided HEI
+     */
+    public abstract LasOutgoingStatsResponseV1 getStats(String heiId);
 
     /**
      * Indicates the maximum number of Outgoing Mobility IDs that can be handled on any request.
