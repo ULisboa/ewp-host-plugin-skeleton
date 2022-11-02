@@ -62,7 +62,13 @@ public abstract class InterInstitutionalAgreementsV6HostProvider extends HostVer
     public abstract Collection<IiasGetResponseV6.Iia> findByHeiIdAndIiaCodes(Collection<String> requesterCoveredHeiIds,
             String heiId, Collection<String> iiaCodes, @Nullable Boolean sendPdf);
 
-    public abstract IiasStatsResponseV6 getStats();
+    /**
+     * Returns the stats relative to the provided HEI ID.
+     *
+     * @param heiId HEI ID of the institution from which to retrieve its stats.
+     * @return Stats of the provided HEI
+     */
+    public abstract IiasStatsResponseV6 getStats(String heiId);
 
     /**
      * Indicates the maximum number of IIA IDs that can be handled on any request.
