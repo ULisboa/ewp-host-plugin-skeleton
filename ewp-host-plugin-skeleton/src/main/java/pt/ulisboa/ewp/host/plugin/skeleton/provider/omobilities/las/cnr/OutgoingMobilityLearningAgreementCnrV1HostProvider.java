@@ -2,6 +2,7 @@ package pt.ulisboa.ewp.host.plugin.skeleton.provider.omobilities.las.cnr;
 
 import java.util.Collection;
 
+import eu.erasmuswithoutpaper.api.omobilities.las.cnr.v1.LasIncomingStatsResponseV1;
 import pt.ulisboa.ewp.host.plugin.skeleton.provider.HostVersionedProvider;
 
 /**
@@ -23,6 +24,14 @@ public abstract class OutgoingMobilityLearningAgreementCnrV1HostProvider extends
      * @param outgoingMobilityIds Outgoing Mobility (Learning Agreement) IDs that were changed.
      */
     public abstract void onChangeNotification(String sendingHeiId, Collection<String> outgoingMobilityIds);
+
+    /**
+     * Returns the statistics describing incoming LAs from a specific HEI.
+     *
+     * @param heiId HEI ID of the institution from which to retrieve the stats.
+     * @return Stats of the provided HEI
+     */
+    public abstract LasIncomingStatsResponseV1 getStats(String heiId);
 
     /**
      * Indicates the maximum number of Outgoing Mobility IDs that can be handled on any request.
