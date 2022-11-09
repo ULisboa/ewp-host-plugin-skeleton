@@ -28,23 +28,4 @@ public abstract class FilesV1HostProvider extends HostVersionedProvider {
     public String getVersion() {
         return "1.0.0";
     }
-
-    public static class FileResponse {
-
-        private final String mediaType;
-        private final byte[] data;
-
-        public FileResponse(String mediaType, byte[] data) {
-            this.mediaType = mediaType;
-            this.data = data;
-        }
-
-        public String getMediaType() {
-            return mediaType;
-        }
-
-        public byte[] getData() {
-            return data;
-        }
-    }
 }
