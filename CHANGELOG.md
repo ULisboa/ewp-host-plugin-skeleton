@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.17.3](https://github.com/ULisboa/ewp-host-plugin-skeleton/tree/0.17.3) (2023-07-07)
+
+### Features
+-  add automatic changelog generator ([d90860253f4e5ae](https://github.com/ULisboa/ewp-host-plugin-skeleton/commit/d90860253f4e5ae3bf5c848ed23e6b41719d1d0d))
+
+
+
 ## [0.17.2](https://github.com/ULisboa/ewp-host-plugin-skeleton/tree/0.17.2) (2022-11-09)
 
 
