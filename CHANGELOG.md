@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.18.0](https://github.com/ULisboa/ewp-host-plugin-skeleton/tree/0.18.0) (2023-08-07)
+
+### Features
+-  add PluginAware that all host providers implement (which allows storing of the current host plugin in the provider) ([839043bb8e55f8d](https://github.com/ULisboa/ewp-host-plugin-skeleton/commit/839043bb8e55f8dbe9b37954ec2f785d88cb1024))
+
+
+
 ## [0.17.4](https://github.com/ULisboa/ewp-host-plugin-skeleton/tree/0.17.4) (2023-07-31)
 
 
