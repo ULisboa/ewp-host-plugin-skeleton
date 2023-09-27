@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.19.0](https://github.com/ULisboa/ewp-host-plugin-skeleton/tree/0.19.0) (2023-09-27)
+
+### Features
+-  update InterInstitutionalAgreementsV6HostProvider to v6.3.0 ([7af2f2fa91fff21](https://github.com/ULisboa/ewp-host-plugin-skeleton/commit/7af2f2fa91fff21d7c4a6c8f5c515b740314a517))
+
+
+
 ## [0.18.0](https://github.com/ULisboa/ewp-host-plugin-skeleton/tree/0.18.0) (2023-08-07)
 
 ### Features
