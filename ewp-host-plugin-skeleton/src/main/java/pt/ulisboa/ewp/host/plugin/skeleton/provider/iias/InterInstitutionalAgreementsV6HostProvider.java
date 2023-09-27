@@ -90,6 +90,6 @@ public abstract class InterInstitutionalAgreementsV6HostProvider extends HostVer
 
     @Override
     public String getVersion() {
-        return "6.2.0";
+        return "6.3.0";
     }
 }
