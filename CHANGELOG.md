@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.20.1](https://github.com/ULisboa/ewp-host-plugin-skeleton/tree/0.20.1) (2023-11-03)
+
+### Features
+-  update InterInstitutionalAgreementsV7HostProvider arguments to latest specification ([56d09d47d0f5f11](https://github.com/ULisboa/ewp-host-plugin-skeleton/commit/56d09d47d0f5f11cd9bf7416af0109995183591e))
+
+
+
 ## [0.20.0](https://github.com/ULisboa/ewp-host-plugin-skeleton/tree/0.20.0) (2023-11-03)
 
 ### Features
