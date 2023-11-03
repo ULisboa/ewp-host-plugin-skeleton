@@ -13,7 +13,6 @@ import pt.ulisboa.ewp.host.plugin.skeleton.provider.HostVersionedProvider;
 public abstract class InterInstitutionalAgreementsV7HostProvider extends HostVersionedProvider {
 
     private static final int DEFAULT_MAX_NUMBER_IIA_IDS_PER_REQUEST = 1;
-    private static final int DEFAULT_MAX_NUMBER_IIA_CODES_PER_REQUEST = 1;
 
     /**
      * Returns a collection of IIA IDs which the requester has access to.
@@ -32,7 +31,7 @@ public abstract class InterInstitutionalAgreementsV7HostProvider extends HostVer
 
     /**
      * Returns a collection of IIAs given their IDs.
-     * If some code is unknown then it must be ignored.
+     * If some ID is unknown then it must be ignored.
      *
      * @param requesterCoveredHeiId HEI ID of the requester. The result should be restricted to the IIAs to
      *            which that HEI ID has access to.
@@ -58,15 +57,6 @@ public abstract class InterInstitutionalAgreementsV7HostProvider extends HostVer
      */
     public int getMaxIiaIdsPerRequest() {
         return DEFAULT_MAX_NUMBER_IIA_IDS_PER_REQUEST;
-    }
-
-    /**
-     * Indicates the maximum number of IIA codes that can be handled on any request.
-     *
-     * @return Maximum number of IIA codes
-     */
-    public int getMaxIiaCodesPerRequest() {
-        return DEFAULT_MAX_NUMBER_IIA_CODES_PER_REQUEST;
     }
 
     @Override
