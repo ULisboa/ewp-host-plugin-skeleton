@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.21.0](https://github.com/ULisboa/ewp-host-plugin-skeleton/tree/0.21.0) (2023-11-14)
+
+### Features
+-  add InterInstitutionalAgreementCnrV3HostProvider ([6b7803fc9ec869e](https://github.com/ULisboa/ewp-host-plugin-skeleton/commit/6b7803fc9ec869eb14bda2a905f062adaa1ca234))
+
+
+
 ## [0.20.3](https://github.com/ULisboa/ewp-host-plugin-skeleton/tree/0.20.3) (2023-11-03)
 
 
