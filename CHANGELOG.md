@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.24.0](https://github.com/ULisboa/ewp-host-plugin-skeleton/tree/0.24.0) (2023-11-21)
+
+
+
+
 ## [0.23.0](https://github.com/ULisboa/ewp-host-plugin-skeleton/tree/0.23.0) (2023-11-17)
 
 ### Features
