@@ -20,7 +20,7 @@ public abstract class InterInstitutionalAgreementsApprovalV1HostProvider extends
      * @param approvingHeiId HEI ID of the approving institution (the target of the operation).
      * @param ownerHeiId HEI ID of the requester that wants to get approvals.
      * @param iiaIds IIA IDs to obtain.
-     * @param sendPdf If true, the response must include the PDF version of the agreement.
+     * @param sendPdf If given and true, the response must include the PDF version of the agreement.
      * @return Collection of IIAs.
      */
     public abstract Collection<IiasApprovalResponseV1.Approval> findByIiaIds(String approvingHeiId, String ownerHeiId,

@@ -23,7 +23,7 @@ public abstract class InterInstitutionalAgreementsV6HostProvider extends HostVer
      * @param requesterCoveredHeiIds List of HEI IDs covered by the requester. The result should be restricted to the IIAs to
      *            which some covered HEI ID has access to.
      * @param heiId Identifier of the HEI which we want to fetch the list of IIAs from.
-     * @param partnerHeiId Identifier used to limit the list of returned IIA IDs to only those in which the partner HEI ID is one
+     * @param partnerHeiId If not null, the identifier used to limit the list of returned IIA IDs to only those in which the partner HEI ID is one
      *            of the partners.
      * @param receivingAcademicYearIds If not null, the list of returned IIA IDs must only include those that are valid in at
      *            least one of the given academic years.
@@ -32,7 +32,7 @@ public abstract class InterInstitutionalAgreementsV6HostProvider extends HostVer
      * @return Collection of IIA IDs.
      */
     public abstract Collection<String> findAllIiaIdsByHeiId(Collection<String> requesterCoveredHeiIds, String heiId,
-            @Nullable String partnerHeiId, Collection<String> receivingAcademicYearIds, LocalDateTime modifiedSince);
+            @Nullable String partnerHeiId, @Nullable Collection<String> receivingAcademicYearIds, @Nullable LocalDateTime modifiedSince);
 
     /**
      * Returns a collection of IIAs given their IDs.
@@ -42,7 +42,7 @@ public abstract class InterInstitutionalAgreementsV6HostProvider extends HostVer
      *            which some covered HEI ID has access to.
      * @param heiId HEI ID of the institution that contains the intended IIAs.
      * @param iiaIds IIA IDs to obtain.
-     * @param sendPdf If true, the response must include the PDF version of the agreement.
+     * @param sendPdf If given and true, the response must include the PDF version of the agreement.
      * @return Collection of IIAs.
      */
     public abstract Collection<IiasGetResponseV6.Iia> findByHeiIdAndIiaIds(Collection<String> requesterCoveredHeiIds,
@@ -56,7 +56,7 @@ public abstract class InterInstitutionalAgreementsV6HostProvider extends HostVer
      *            which some covered HEI ID has access to.
      * @param heiId HEI ID of the institution that contains the intended IIAs.
      * @param iiaCodes IIA codes to obtain.
-     * @param sendPdf If true, the response must include the PDF version of the agreement.
+     * @param sendPdf If given and true, the response must include the PDF version of the agreement.
      * @return Collection of IIAs.
      */
     public abstract Collection<IiasGetResponseV6.Iia> findByHeiIdAndIiaCodes(Collection<String> requesterCoveredHeiIds,

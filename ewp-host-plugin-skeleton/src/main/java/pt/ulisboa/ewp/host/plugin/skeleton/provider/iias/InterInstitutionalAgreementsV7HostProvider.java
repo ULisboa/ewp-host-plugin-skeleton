@@ -27,7 +27,7 @@ public abstract class InterInstitutionalAgreementsV7HostProvider extends HostVer
      * @return Collection of IIA IDs.
      */
     public abstract Collection<String> findAllIiaIdsByHeiId(String requesterCoveredHeiId, String heiId,
-            Collection<String> receivingAcademicYearIds, LocalDateTime modifiedSince);
+            @Nullable Collection<String> receivingAcademicYearIds, @Nullable LocalDateTime modifiedSince);
 
     /**
      * Returns a collection of IIAs given their IDs.
