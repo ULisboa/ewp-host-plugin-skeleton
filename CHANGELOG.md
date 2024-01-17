@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.24.1](https://github.com/ULisboa/ewp-host-plugin-skeleton/tree/0.24.1) (2024-01-17)
+
+
+### Improvements
+-  add some missing @Nullable to some provider classes ([a813965cd7978dc](https://github.com/ULisboa/ewp-host-plugin-skeleton/commit/a813965cd7978dcc651fecec069ea198ed240a27))
+
+
 ## [0.24.0](https://github.com/ULisboa/ewp-host-plugin-skeleton/tree/0.24.0) (2023-11-21)
 
 
