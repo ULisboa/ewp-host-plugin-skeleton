@@ -5,6 +5,9 @@
 
 
 
+### Refactoring
+-  remove support for discontinued IIAs EWP APIs ([272ae1ee7840fb0](https://github.com/ULisboa/ewp-host-plugin-skeleton/commit/272ae1ee7840fb0b99eac5f9c176d0819c7fb9e4))
+
 ## [0.24.1](https://github.com/ULisboa/ewp-host-plugin-skeleton/tree/0.24.1) (2024-01-17)
 
 
@@ -12,15 +15,20 @@
 -  add some missing @Nullable to some provider classes ([a813965cd7978dc](https://github.com/ULisboa/ewp-host-plugin-skeleton/commit/a813965cd7978dcc651fecec069ea198ed240a27))
 
 
+
 ## [0.24.0](https://github.com/ULisboa/ewp-host-plugin-skeleton/tree/0.24.0) (2023-11-21)
 
 
 
 
+### Refactoring
+-  change FactSheetsV1HostProvider to v1.2.0 (no actual changes) ([d6b02f22260cda4](https://github.com/ULisboa/ewp-host-plugin-skeleton/commit/d6b02f22260cda472044d6230a6e22f85001e113))
+
 ## [0.23.0](https://github.com/ULisboa/ewp-host-plugin-skeleton/tree/0.23.0) (2023-11-17)
 
 ### Features
 -  add InterInstitutionalAgreementApprovalCnrV2HostProvider ([f6dd19c3569a225](https://github.com/ULisboa/ewp-host-plugin-skeleton/commit/f6dd19c3569a225147cd938218e7c068dcff63db))
+
 
 
 
@@ -31,10 +39,12 @@
 
 
 
+
 ## [0.21.0](https://github.com/ULisboa/ewp-host-plugin-skeleton/tree/0.21.0) (2023-11-14)
 
 ### Features
 -  add InterInstitutionalAgreementCnrV3HostProvider ([6b7803fc9ec869e](https://github.com/ULisboa/ewp-host-plugin-skeleton/commit/6b7803fc9ec869eb14bda2a905f062adaa1ca234))
+
 
 
 
@@ -43,7 +53,11 @@
 
 
 
+### Refactoring
+-  remove one unused method of InterInstitutionalAgreementsV7HostProvider ([ffdd44c5f93ffa4](https://github.com/ULisboa/ewp-host-plugin-skeleton/commit/ffdd44c5f93ffa4f36e09bee3c1fe78b0c019a36))
+
 ## [0.20.2](https://github.com/ULisboa/ewp-host-plugin-skeleton/tree/0.20.2) (2023-11-03)
+
 
 
 
@@ -55,10 +69,12 @@
 
 
 
+
 ## [0.20.0](https://github.com/ULisboa/ewp-host-plugin-skeleton/tree/0.20.0) (2023-11-03)
 
 ### Features
 -  add InterInstitutionalAgreementsV7HostProvider ([057e626ac27b99a](https://github.com/ULisboa/ewp-host-plugin-skeleton/commit/057e626ac27b99a703d00ac27219b037721a3ef5))
+
 
 
 
@@ -69,6 +85,7 @@
 
 
 
+
 ## [0.18.0](https://github.com/ULisboa/ewp-host-plugin-skeleton/tree/0.18.0) (2023-08-07)
 
 ### Features
@@ -76,7 +93,9 @@
 
 
 
+
 ## [0.17.4](https://github.com/ULisboa/ewp-host-plugin-skeleton/tree/0.17.4) (2023-07-31)
+
 
 
 
@@ -88,6 +107,7 @@
 
 
 
+
 ## [0.17.2](https://github.com/ULisboa/ewp-host-plugin-skeleton/tree/0.17.2) (2022-11-09)
 
 
@@ -95,10 +115,12 @@
 -  move FileResponse outside of FilesV1HostProvider ([54e53a2a5c10922](https://github.com/ULisboa/ewp-host-plugin-skeleton/commit/54e53a2a5c10922cda4190f287fec27705d5d1e0))
 
 
+
 ## [0.17.1](https://github.com/ULisboa/ewp-host-plugin-skeleton/tree/0.17.1) (2022-11-08)
 
 ### Features
 -  add getStats() to OutgoingMobilityLearningAgreementCnrV1HostProvider ([3f4f7480e02adf5](https://github.com/ULisboa/ewp-host-plugin-skeleton/commit/3f4f7480e02adf541213c815c3df9161276c77e4))
+
 
 
 
@@ -109,10 +131,12 @@
 
 
 
+
 ## [0.16.0](https://github.com/ULisboa/ewp-host-plugin-skeleton/tree/0.16.0) (2022-10-28)
 
 ### Features
 -  add heiId parameter and documentation to getStats of OutgoingMobilityLearningAgreementsV1HostProvider ([9aa88f891ad9907](https://github.com/ULisboa/ewp-host-plugin-skeleton/commit/9aa88f891ad99074b41a9aa3799c801f508cb875))
+
 
 
 
@@ -121,6 +145,7 @@
 ### Features
 -  add requesterCoveredHeiIds parameter to FilesV1HostProvider ([444ffef5785da4b](https://github.com/ULisboa/ewp-host-plugin-skeleton/commit/444ffef5785da4ba87376f48466d4bb8e760699f))
 -  add FilesV1HostProvider ([0c0ef7ad3a25528](https://github.com/ULisboa/ewp-host-plugin-skeleton/commit/0c0ef7ad3a2552803f1e97a4ae3231c8051c5ad3))
+
 
 
 
@@ -139,12 +164,14 @@
 
 
 
+
 ## [0.13.1](https://github.com/ULisboa/ewp-host-plugin-skeleton/tree/0.13.1) (2021-12-20)
 
 
 
 ### Bug Fixes
 -  some methods related to Incoming Mobilities API were not expecting correct return types ([24f311f90a535b6](https://github.com/ULisboa/ewp-host-plugin-skeleton/commit/24f311f90a535b6cacde868ce2e6057465f2565a))
+
 
 ## [0.13.0](https://github.com/ULisboa/ewp-host-plugin-skeleton/tree/0.13.0) (2021-12-20)
 
@@ -153,10 +180,12 @@
 ### Bug Fixes
 -  there was a typo in one method name ([c7429d16e400b0f](https://github.com/ULisboa/ewp-host-plugin-skeleton/commit/c7429d16e400b0fbcfee8d755921975c25e264f6))
 
+
 ## [0.12.2](https://github.com/ULisboa/ewp-host-plugin-skeleton/tree/0.12.2) (2021-11-17)
 
 ### Features
 -  add return type to updateOutgoingMobilityLearningAgreement(...) ([6d07a29060d2321](https://github.com/ULisboa/ewp-host-plugin-skeleton/commit/6d07a29060d23212471c55dab8ae819672310404))
+
 
 
 
@@ -166,6 +195,7 @@
 
 ### Bug Fixes
 -  Get of Outgoing Mobility Learning Agreements returned the wrong type ([6723eb2a2ed07cc](https://github.com/ULisboa/ewp-host-plugin-skeleton/commit/6723eb2a2ed07cc54db4be71608450f0bc12b173))
+
 
 ## [0.12.0](https://github.com/ULisboa/ewp-host-plugin-skeleton/tree/0.12.0) (2021-11-11)
 
@@ -185,10 +215,12 @@
 ### Bug Fixes
 -  typo in one class name ([8e53c80c9b9e58a](https://github.com/ULisboa/ewp-host-plugin-skeleton/commit/8e53c80c9b9e58a1036e3b8910f703e33a9d20fa))
 
+
 ## [0.11.0](https://github.com/ULisboa/ewp-host-plugin-skeleton/tree/0.11.0) (2021-11-09)
 
 ### Features
 -  update to InterInstitutional Agreements V6 API ([177695dc00c8860](https://github.com/ULisboa/ewp-host-plugin-skeleton/commit/177695dc00c886043a24efe4bce591c7800f184b))
+
 
 
 
@@ -199,10 +231,12 @@
 
 
 
+
 ## [0.9.0](https://github.com/ULisboa/ewp-host-plugin-skeleton/tree/0.9.0) (2021-11-04)
 
 ### Features
 -  allow to provide covered ounit IDs per HEI ID as well whether the current plugin is primary ([2d4d5b96b025d44](https://github.com/ULisboa/ewp-host-plugin-skeleton/commit/2d4d5b96b025d4484255f5e7d1a46b9de0af851c))
+
 
 
 
@@ -213,15 +247,20 @@
 
 
 
+
 ## [0.7.0](https://github.com/ULisboa/ewp-host-plugin-skeleton/tree/0.7.0) (2021-06-02)
 
 
 
 
+### Refactoring
+-  rename host providers to include versions ([2fe97de05ef2437](https://github.com/ULisboa/ewp-host-plugin-skeleton/commit/2fe97de05ef243795f16246350c1f829fbe6fdd0))
+
 ## [0.6.0](https://github.com/ULisboa/ewp-host-plugin-skeleton/tree/0.6.0) (2021-05-31)
 
 ### Features
 -  add version to HostProvider ([19e118825bf5c46](https://github.com/ULisboa/ewp-host-plugin-skeleton/commit/19e118825bf5c46e8bd36fefef44d2d47205ab17))
+
 
 
 
@@ -232,6 +271,7 @@
 
 
 
+
 ## [0.4.0](https://github.com/ULisboa/ewp-host-plugin-skeleton/tree/0.4.0) (2021-05-11)
 
 ### Features
@@ -239,7 +279,9 @@
 
 
 
+
 ## [0.3.1](https://github.com/ULisboa/ewp-host-plugin-skeleton/tree/0.3.1) (2021-05-10)
+
 
 
 
@@ -251,6 +293,7 @@
 
 
 
+
 ## [0.2.2](https://github.com/ULisboa/ewp-host-plugin-skeleton/tree/0.2.2) (2021-02-01)
 
 
@@ -258,12 +301,15 @@
 ### Bug Fixes
 -  responses of CoursesHostProvider were of wrong type ([3804ea45637d47a](https://github.com/ULisboa/ewp-host-plugin-skeleton/commit/3804ea45637d47a5bac5e1aae41c402a03450e69))
 
+
 ## [0.2.1](https://github.com/ULisboa/ewp-host-plugin-skeleton/tree/0.2.1) (2020-12-14)
 
 
 
 
+
 ## [0.2.0](https://github.com/ULisboa/ewp-host-plugin-skeleton/tree/0.2.0) (2020-12-10)
+
 
 
 
@@ -275,10 +321,12 @@
 
 
 
+
 ## [0.1.3](https://github.com/ULisboa/ewp-host-plugin-skeleton/tree/0.1.3) (2020-11-18)
 
 ### Features
 -  add provider to obtain list of learning opportunities specification IDs ([834052c1f687b13](https://github.com/ULisboa/ewp-host-plugin-skeleton/commit/834052c1f687b139af189b1a81908a4ea685d6da))
+
 
 
 
@@ -289,6 +337,7 @@
 
 
 
+
 ## [0.1.1](https://github.com/ULisboa/ewp-host-plugin-skeleton/tree/0.1.1) (2020-07-08)
 
 ### Features
@@ -296,8 +345,12 @@
 
 
 
+
 ## [0.1.0](https://github.com/ULisboa/ewp-host-plugin-skeleton/tree/0.1.0) (2020-06-09)
 
 
 
+
+### Refactoring
+-  make InstitutionsHostProvider return an optional with institution data instead of data or null ([fc8a5563c3d8d4f](https://github.com/ULisboa/ewp-host-plugin-skeleton/commit/fc8a5563c3d8d4f8c46598c5055a473b3debe81c))
 
