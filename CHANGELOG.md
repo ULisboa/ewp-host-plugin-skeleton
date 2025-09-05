@@ -1,5 +1,21 @@
 # Changelog
 
+## [0.28.0](https://github.com/ULisboa/ewp-host-plugin-skeleton/tree/0.28.0) (2025-09-05)
+
+### Features
+-  add OutgoingMobilitiesV3HostProvider ([bacada9e0dd6f4e](https://github.com/ULisboa/ewp-host-plugin-skeleton/commit/bacada9e0dd6f4eba7390232b53eae899a6aedac))
+
+### Improvements
+-  update ewp-connector-api to v4.1.7 ([123b07fabb53ddb](https://github.com/ULisboa/ewp-host-plugin-skeleton/commit/123b07fabb53ddb8026329d0ef85f4f66be88cb8))
+
+
+
+## [0.27.0](https://github.com/ULisboa/ewp-host-plugin-skeleton/tree/0.27.0) (2024-09-30)
+
+
+
+
+
 ## [0.25.0](https://github.com/ULisboa/ewp-host-plugin-skeleton/tree/0.25.0) (2024-05-02)
 
 
