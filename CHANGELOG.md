@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.29.0](https://github.com/ULisboa/ewp-host-plugin-skeleton/tree/0.29.0) (2026-01-27)
+
+### Features
+-  add OutgoingMobilityCnrV2HostProvider ([448f44136a5cf03](https://github.com/ULisboa/ewp-host-plugin-skeleton/commit/448f44136a5cf0390e502c191266278794cfb152))
+
+
+
+
 ## [0.28.1](https://github.com/ULisboa/ewp-host-plugin-skeleton/tree/0.28.1) (2025-12-05)
 
 
