@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.30.0](https://github.com/ULisboa/ewp-host-plugin-skeleton/tree/0.30.0) (2026-02-16)
+
+### Features
+-  add OutgoingMobilityStatsV1HostProvider ([be3b8c7f5941505](https://github.com/ULisboa/ewp-host-plugin-skeleton/commit/be3b8c7f59415059e42e6792f2fd19c016e6095d))
+
+
+
+
 ## [0.29.0](https://github.com/ULisboa/ewp-host-plugin-skeleton/tree/0.29.0) (2026-01-27)
 
 ### Features
