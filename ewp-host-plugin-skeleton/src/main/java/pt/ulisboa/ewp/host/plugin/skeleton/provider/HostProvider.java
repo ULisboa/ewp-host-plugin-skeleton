@@ -1,9 +1,11 @@
 package pt.ulisboa.ewp.host.plugin.skeleton.provider;
 
+import org.pf4j.Extension;
 import org.pf4j.ExtensionPoint;
 import pt.ulisboa.ewp.host.plugin.skeleton.HostPlugin;
 import pt.ulisboa.ewp.host.plugin.skeleton.interfaces.PluginAware;
 
+@Extension
 public abstract class HostProvider implements ExtensionPoint, PluginAware {
 
   protected HostPlugin hostPlugin;
