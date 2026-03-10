@@ -17,4 +17,14 @@ public abstract class HostProvider implements ExtensionPoint, PluginAware {
   public void setPlugin(HostPlugin hostPlugin) {
     this.hostPlugin = hostPlugin;
   }
+
+  /**
+   * Can be used to define if the current host provider is active or not. If inactive then it won't
+   * be considered at all by the EWP Node.
+   *
+   * @return True if host provider is active
+   */
+  public boolean isActive() {
+    return true;
+  }
 }
