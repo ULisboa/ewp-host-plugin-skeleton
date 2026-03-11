@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.31.0](https://github.com/ULisboa/ewp-host-plugin-skeleton/tree/0.31.0) (2026-03-10)
+
+### Features
+-  allow a host provider to be active or not ([232e13b9c8280a6](https://github.com/ULisboa/ewp-host-plugin-skeleton/commit/232e13b9c8280a65408642cb60ac4fcc5cd8cad9))
+
+### Improvements
+-  make all host providers have an @Extension automatically ([3ed8014f463ef7d](https://github.com/ULisboa/ewp-host-plugin-skeleton/commit/3ed8014f463ef7d615b8218602ebc29a751941b3))
+
+
+
 ## [0.30.0](https://github.com/ULisboa/ewp-host-plugin-skeleton/tree/0.30.0) (2026-02-16)
 
 ### Features
